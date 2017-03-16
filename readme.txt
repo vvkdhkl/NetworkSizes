@@ -1,3 +1,11 @@
+Coursework project: Network statistics calculation
+
+Large Networks: ~million nodes
+
+Algorithms implemented: Random sources/pairs, Warshall-Floyd, ANF
+
+Problem: Read network files and compute the sizes: mean, median, effective and exact diameters.
+
 For the statistics computations, we first implemented exact distance calculation algorithm (Warshall-Floyd), which worked well with small graphs when we tested. However, on testing it with larger graphs, it was very bad with the runtime, such that we couldn’t get it finished for large graphs beyond Wiki-Vote lscc. The program was always killed midway. O(n^3) indeed proved to be very heavy cost.
 Then we focused on getting ANF running. The algorithm was implemented based on the paper on ANF (http://dl.acm.org/citation.cfm?doid=775047.775059) , using Flajolet-Martin (FM) bitmask counters. The implementation is discussed below:
 
